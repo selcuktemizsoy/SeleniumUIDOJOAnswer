@@ -1,7 +1,7 @@
 package com.epias.simple_tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.Assertions;
+
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,8 +23,9 @@ public class DemoTest {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://google.com.tr");
+        driver.get("https://kloia.com");
+        driver.navigate().back();
         driver.quit();
-
     }
 
 
